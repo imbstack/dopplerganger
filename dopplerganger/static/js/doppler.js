@@ -17,9 +17,7 @@ function run() {
         // TODO: This is all bad
         var data = [];
         data.push(JSON.parse(evt.data));
-        console.log(data);
         var darts = svg.select(".darts").selectAll("circle").data(data);
-        console.log(darts);
 
         darts.enter().insert("circle")
             .attr("cx", function(p) {return p.x})
